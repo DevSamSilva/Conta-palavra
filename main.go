@@ -1,10 +1,10 @@
 package main
 
 import (
-	"bufio" //Leitura de input do usuário
-	"fmt"   //Formatação e impressão
-	"os"    // Interação com o sistema operacional (arquivos, etc.)
-	"strings"
+	"bufio"   //Leitura de input do usuário
+	"fmt"     //Formatação e impressão
+	"os"      // Interação com o sistema operacional (arquivos, etc.)
+	"strings" // Manipulação de strings
 )
 
 func main() {
@@ -27,12 +27,10 @@ func main() {
 		}
 		text = string(fileContent)
 	} else {
-		//Se o usuário digitou algo, usa esse texto (text = input).
-		text = input
+		text = input //Se o usuário digitou algo, usa esse texto (text = input).
 	}
 
 	words := strings.Fields(text) //Divide o texto em palavras (separadas por espaços, tabs ou quebras de linha).
-	//Exemplo: "Olá mundo Go" vira []string{"Olá", "mundo", "Go"}.
 
 	wordCount := make(map[string]int) //Cria um mapa (dicionário) para contar quantas vezes cada palavra aparece.
 	//chave string : palavra repetida
@@ -40,8 +38,9 @@ func main() {
 
 	//Percorre cada palavra:
 	for _, word := range words {
-		wordCount[strings.ToLower(word)]++ //strings.ToLower(word): Converte para minúsculas (para evitar diferenciação entre "Go" e "go").
-		//wordCount[palavra]++: Incrementa a contagem da palavra no mapa.
+
+		//strings.ToLower(word): Converte para minúsculas (para evitar diferenciação entre "Go" e "go").
+		wordCount[strings.ToLower(word)]++ //wordCount[palavra]++: Incrementa a contagem da palavra no mapa.
 
 	}
 
