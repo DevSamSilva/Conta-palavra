@@ -51,6 +51,7 @@ func main() {
 	maxCount := 0
 
 	//Percorre o mapa (wordCount) e compara as contagens.
+	//comparação
 	for word, count := range wordCount {
 
 		//Se uma palavra tiver contagem maior que maxCount, atualiza maxWord e maxCount.
